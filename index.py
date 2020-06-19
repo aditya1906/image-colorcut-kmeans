@@ -28,6 +28,6 @@ def imageColorCut(imagePath, k, newImagePath=None):
         plt.imsave(newImagePath, k_img)
     else:
         imageName = imagePath.split('.')
-        imageName = '{0}-{1}.{2}'.format(imageName[0], k, imageName[-1])
+        imageName = '{0}-{1}.{2}'.format(imageName[:-1], k, imageName[-1])
     
     print('Successfully generated your image')
